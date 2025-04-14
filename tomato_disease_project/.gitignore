@@ -1,0 +1,17 @@
+# Ignore Python virtual environments
+venv/
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Ignore notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore OS and IDE files
+.DS_Store
+.vscode/
+
+# Django-specific
+/staticfiles/
+/media/
+.env

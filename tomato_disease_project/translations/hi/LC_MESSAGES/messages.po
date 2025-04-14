@@ -1,0 +1,73 @@
+# Hindi translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hi\n"
+
+msgid "Tomato Disease Detector"
+msgstr "टमाटर रोग पहचानकर्ता"
+
+msgid "Choose Language:"
+msgstr "भाषा चुनें:"
+
+msgid "🌱 Tomato Disease Detector"
+msgstr "🌱 टमाटर रोग पहचानकर्ता"
+
+msgid "📷 Upload Leaf Image:"
+msgstr "📷 पत्ते की छवि अपलोड करें:"
+
+msgid "💧 Soil Moisture (%%):"
+msgstr "💧 मिट्टी की नमी (%%):"
+
+msgid "e.g. 45"
+msgstr "जैसे 45"
+
+msgid "🧪 Soil pH:"
+msgstr "🧪 मिट्टी का pH:"
+
+msgid "e.g. 6.5"
+msgstr "जैसे 6.5"
+
+msgid "🧂 Soil Salinity (dS/m):"
+msgstr "🧂 मिट्टी की लवणता (dS/m):"
+
+msgid "e.g. 1.8"
+msgstr "जैसे 1.8"
+
+msgid "🔍 Predict"
+msgstr "🔍 पूर्वानुमान लगाएं"
+
+msgid "Prediction Result"
+msgstr "पूर्वानुमान परिणाम"
+
+msgid "🌿 Prediction Result"
+msgstr "🌿 पूर्वानुमान परिणाम"
+
+msgid "Disease:"
+msgstr "रोग:"
+
+msgid "Uploaded Image"
+msgstr "अपलोड की गई छवि"
+
+msgid "📊 Sensor Readings & Recommendations"
+msgstr "📊 सेंसर रीडिंग और सिफारिशें"
+
+msgid "Soil Moisture:"
+msgstr "मिट्टी की नमी:"
+
+msgid "Status:"
+msgstr "स्थिति:"
+
+msgid "Recommended:"
+msgstr "अनुशंसित:"
+
+msgid "Soil pH:"
+msgstr "मिट्टी का pH:"
+
+msgid "Soil Salinity:"
+msgstr "मिट्टी की लवणता:"
+
+msgid "🔁 Try another image"
+msgstr "🔁 दूसरी छवि आज़माएं"

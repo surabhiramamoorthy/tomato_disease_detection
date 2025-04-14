@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: kn\n"
+
+msgid "Tomato Disease Detector"
+msgstr "ಟೊಮೆಟೊ ರೋಗ ಪತ್ತೆ ಸಾಧನ"
+
+msgid "Choose Language:"
+msgstr "ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ:"
+
+msgid "🌱 Tomato Disease Detector"
+msgstr "🌱 ಟೊಮೆಟೊ ರೋಗ ಪತ್ತೆ ಸಾಧನ"
+
+msgid "📷 Upload Leaf Image:"
+msgstr "📷 ಎಲೆಯ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ:"
+
+msgid "💧 Soil Moisture (%%):"
+msgstr "💧 ಮಣ್ಣಿನ ಆರ್ದ್ರತೆ (%%):"
+
+msgid "e.g. 45"
+msgstr "ಉದಾ: 45"
+
+msgid "🧪 Soil pH:"
+msgstr "🧪 ಮಣ್ಣಿನ ಪಿಎಚ್‌:"
+
+msgid "e.g. 6.5"
+msgstr "ಉದಾ: 6.5"
+
+msgid "🧂 Soil Salinity (dS/m):"
+msgstr "🧂 ಮಣ್ಣಿನ ಉಪ್ಪುಗಾರಿಕೆ (dS/m):"
+
+msgid "e.g. 1.8"
+msgstr "ಉದಾ: 1.8"
+
+msgid "🔍 Predict"
+msgstr "🔍 ಊಹಿಸಿ"
+
+msgid "Prediction Result"
+msgstr "ಅನுமான ಫಲಿತಾಂಶ"
+
+msgid "🌿 Prediction Result"
+msgstr "🌿 ಅನುಮಾನ ಫಲಿತಾಂಶ"
+
+msgid "Disease:"
+msgstr "ರೋಗ:"
+
+msgid "Uploaded Image"
+msgstr "ಅಪ್‌ಲೋಡ್ ಮಾಡಲಾದ ಚಿತ್ರ"
+
+msgid "📊 Sensor Readings & Recommendations"
+msgstr "📊 ಸೆನ್ಸಾರ್ ಓದುಗಳು ಮತ್ತು ಶಿಫಾರಸುಗಳು"
+
+msgid "Soil Moisture:"
+msgstr "ಮಣ್ಣಿನ ಆರ್ದ್ರತೆ:"
+
+msgid "Status:"
+msgstr "ಸ್ಥಿತಿ:"
+
+msgid "Recommended:"
+msgstr "ಶಿಫಾರಸು ಮಾಡಿದ:"
+
+msgid "Soil pH:"
+msgstr "ಮಣ್ಣಿನ ಪಿಎಚ್‌:"
+
+msgid "Soil Salinity:"
+msgstr "ಮಣ್ಣಿನ ಉಪ್ಪುಗಾರಿಕೆ:"
+
+msgid "🔁 Try another image"
+msgstr "🔁 ಮತ್ತೊಂದು ಚಿತ್ರವನ್ನು ಪ್ರಯತ್ನಿಸಿ"

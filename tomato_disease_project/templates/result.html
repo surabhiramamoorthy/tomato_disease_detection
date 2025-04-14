@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ _('Prediction Result') }}</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+    }
+
+    .close-btn {
+      float: right;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .info-button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .confidence-section {
+      margin: 20px 0;
+    }
+
+    .confidence-bar {
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 24px;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .confidence-fill {
+      height: 100%;
+      color: white;
+      text-align: center;
+      line-height: 24px;
+      font-weight: bold;
+      width: 0;
+      transition: width 1s ease-in-out;
+    }
+
+    .low-confidence {
+      background-color: #f44336;
+    }
+
+    .medium-confidence {
+      background-color: #ff9800;
+    }
+
+    .high-confidence {
+      background-color: #4caf50;
+    }
+
+    .confidence-label {
+      font-weight: bold;
+      margin-top: 6px;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 220px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      padding: 6px;
+      border-radius: 6px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* above */
+      left: 50%;
+      margin-left: -110px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{{ _('🌿 Prediction Result') }}</h1>
+
+    <p><strong>{{ _('Disease:') }}</strong> {{ disease }}</p>
+    <img src="{{ img_path }}" alt="{{ _('Uploaded Image') }}" width="300px">
+
+    {% if confidence %}
+      {% set confidence_class = '' %}
+      {% set confidence_label = '' %}
+      {% if confidence < 50 %}
+        {% set confidence_class = 'low-confidence' %}
+        {% set confidence_label = _('Low Confidence') %}
+      {% elif confidence < 80 %}
+        {% set confidence_class = 'medium-confidence' %}
+        {% set confidence_label = _('Moderate Confidence') %}
+      {% else %}
+        {% set confidence_class = 'high-confidence' %}
+        {% set confidence_label = _('High Confidence') %}
+      {% endif %}
+
+      <div class="confidence-section">
+        <h3>{{ _('🔍 Prediction Confidence') }}</h3>
+
+        <div class="tooltip">
+          <div class="confidence-bar">
+            <div class="confidence-fill {{ confidence_class }}" id="confidenceFill">
+              {{ confidence|round(1) }}%
+            </div>
+          </div>
+          <span class="tooltiptext">
+            This represents how confident the model is about its prediction.
+          </span>
+        </div>
+
+        <div class="confidence-label">{{ confidence_label }}</div>
+      </div>
+    {% endif %}
+
+    <button class="info-button" onclick="showModal()">
+      ℹ️ {{ _('More About This Disease') }}
+    </button>
+
+    <hr>
+    <h3>{{ _('📊 Sensor Readings') }}</h3>
+
+    <p><strong>{{ _('Soil Moisture:') }}</strong> {{ moisture }}%
+      <br>{{ _('Status:') }} <strong>{{ moisture_status }}</strong>
+      <br>{{ _('Recommended:') }} 40–60%
+    </p>
+
+    <p><strong>{{ _('Soil pH:') }}</strong> {{ ph }}
+      <br>{{ _('Status:') }} <strong>{{ ph_status }}</strong>
+      <br>{{ _('Recommended:') }} 6.0–6.8
+    </p>
+
+    <p><strong>{{ _('Soil Salinity:') }}</strong> {{ salinity }} dS/m
+      <br>{{ _('Status:') }} <strong>{{ salinity_status }}</strong>
+      <br>{{ _('Recommended:') }} 0.7–2.0 dS/m
+    </p>
+
+    <br>
+    <a href="/">{{ _('🔁 Try another image') }}</a>
+  </div>
+
+  <!-- Disease Info Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <h3>{{ disease }}</h3>
+
+      {% if disease_info %}
+        <p><strong>Description:</strong> {{ disease_info.description }}</p>
+        <p><strong>Causes:</strong> {{ disease_info.causes }}</p>
+        <p><strong>Symptoms:</strong> {{ disease_info.symptoms }}</p>
+        <p><strong>Cure:</strong> {{ disease_info.cure }}</p>
+      {% else %}
+        <p>No additional information available for this disease.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    function showModal() {
+      document.getElementById('infoModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('infoModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('infoModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+
+    // Animate confidence bar
+    window.onload = function () {
+      const fill = document.getElementById('confidenceFill');
+      const percentage = parseFloat(fill.textContent);
+      fill.style.width = percentage + '%';
+    };
+  </script>
+</body>
+</html>
