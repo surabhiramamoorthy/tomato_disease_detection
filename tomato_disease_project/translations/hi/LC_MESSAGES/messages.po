@@ -1,73 +1,337 @@
-# Hindi translations for PROJECT.
-# Copyright (C) 2025 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
+
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-28 23:01+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: hi\n"
+"Language-Team: hi <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
 
+#: templates/index.html:7
 msgid "Tomato Disease Detector"
 msgstr "टमाटर रोग पहचानकर्ता"
 
+#: templates/index.html:21
 msgid "Choose Language:"
 msgstr "भाषा चुनें:"
 
+#: templates/index.html:29
 msgid "🌱 Tomato Disease Detector"
 msgstr "🌱 टमाटर रोग पहचानकर्ता"
 
+#: templates/index.html:34
 msgid "📷 Upload Leaf Image:"
 msgstr "📷 पत्ते की छवि अपलोड करें:"
 
-msgid "💧 Soil Moisture (%%):"
-msgstr "💧 मिट्टी की नमी (%%):"
+#: templates/index.html:37
+#, fuzzy
+msgid "💧 Soil Moisture (%)"
+msgstr "💧 मिट्टी की नमी (percent):"
 
+#: templates/index.html:38
 msgid "e.g. 45"
-msgstr "जैसे 45"
+msgstr "उदा. 45"
 
+#: templates/index.html:40
 msgid "🧪 Soil pH:"
-msgstr "🧪 मिट्टी का pH:"
+msgstr "🧪 मिट्टी का पीएच:"
 
+#: templates/index.html:41
 msgid "e.g. 6.5"
-msgstr "जैसे 6.5"
+msgstr "उदा. 6.5"
 
+#: templates/index.html:43
 msgid "🧂 Soil Salinity (dS/m):"
 msgstr "🧂 मिट्टी की लवणता (dS/m):"
 
+#: templates/index.html:44
 msgid "e.g. 1.8"
-msgstr "जैसे 1.8"
+msgstr "उदा. 1.8"
 
+#: templates/index.html:46
 msgid "🔍 Predict"
 msgstr "🔍 पूर्वानुमान लगाएं"
 
+#: templates/result.html:5
 msgid "Prediction Result"
 msgstr "पूर्वानुमान परिणाम"
 
+#: templates/result.html:13
 msgid "🌿 Prediction Result"
 msgstr "🌿 पूर्वानुमान परिणाम"
 
+#: templates/result.html:15
 msgid "Disease:"
 msgstr "रोग:"
 
+#: templates/result.html:16
 msgid "Uploaded Image"
 msgstr "अपलोड की गई छवि"
 
-msgid "📊 Sensor Readings & Recommendations"
-msgstr "📊 सेंसर रीडिंग और सिफारिशें"
+#: templates/result.html:23
+msgid "Low Confidence"
+msgstr "कम विश्वास"
 
+#: templates/result.html:26
+msgid "Moderate Confidence"
+msgstr "मध्यम विश्वास"
+
+#: templates/result.html:29
+msgid "High Confidence"
+msgstr "उच्च विश्वास"
+
+#: templates/result.html:33
+msgid "🔍 Prediction Confidence"
+msgstr "🔍 पूर्वानुमान विश्वास"
+
+#: templates/result.html:42
+msgid "This represents how confident the model is about its prediction."
+msgstr "यह दर्शाता है कि मॉडल अपने पूर्वानुमान के बारे में कितना आत्मविश्वासी है।"
+
+#: templates/result.html:51
+msgid "More About This Disease"
+msgstr "इस रोग के बारे में अधिक जानकारी"
+
+#: templates/result.html:55
+msgid "📊 Sensor Readings"
+msgstr "📊 सेंसर रीडिंग्स"
+
+#: templates/result.html:57
 msgid "Soil Moisture:"
 msgstr "मिट्टी की नमी:"
 
+#: templates/result.html:58 templates/result.html:63 templates/result.html:68
 msgid "Status:"
 msgstr "स्थिति:"
 
+#: templates/result.html:59 templates/result.html:64 templates/result.html:69
 msgid "Recommended:"
 msgstr "अनुशंसित:"
 
+#: templates/result.html:62
 msgid "Soil pH:"
-msgstr "मिट्टी का pH:"
+msgstr "मिट्टी का पीएच:"
 
+#: templates/result.html:67
 msgid "Soil Salinity:"
 msgstr "मिट्टी की लवणता:"
 
+#: templates/result.html:73
+#, fuzzy
 msgid "🔁 Try another image"
-msgstr "🔁 दूसरी छवि आज़माएं"
+msgstr "एक और छवि आज़माएं"
+
+#: templates/result.html:83
+msgid "Description:"
+msgstr "विवरण:"
+
+#: templates/result.html:84
+msgid "Causes:"
+msgstr "कारण:"
+
+#: templates/result.html:85
+msgid "Symptoms:"
+msgstr "लक्षण:"
+
+#: templates/result.html:86
+msgid "Cure:"
+msgstr "उपचार:"
+
+#: templates/result.html:88
+msgid "No additional information available for this disease."
+msgstr "इस रोग के लिए कोई अतिरिक्त जानकारी उपलब्ध नहीं है।"
+
+#~ msgid "Invalid input"
+#~ msgstr "अमान्य इनपुट"
+
+#~ msgid "Low"
+#~ msgstr "कम"
+
+#~ msgid "High"
+#~ msgstr "उच्च"
+
+#~ msgid "Normal"
+#~ msgstr "सामान्य"
+
+#~ msgid ""
+#~ "Bacterial spot is a common disease "
+#~ "that causes dark, water-soaked spots "
+#~ "on leaves and fruit."
+#~ msgstr ""
+#~ "बैक्टीरियल स्पॉट एक सामान्य रोग है "
+#~ "जो पत्तियों और फलों पर गहरे, पानी"
+#~ " से भीगे धब्बे पैदा करता है।"
+
+#~ msgid ""
+#~ "Caused by Xanthomonas bacteria, often "
+#~ "spread through infected seeds or water"
+#~ " splash."
+#~ msgstr ""
+#~ "Xanthomonas बैक्टीरिया के कारण होता है,"
+#~ " जो अक्सर संक्रमित बीजों या पानी "
+#~ "के छींटों से फैलता है।"
+
+#~ msgid ""
+#~ "Small brown lesions on leaves, black "
+#~ "spots on fruit, yellowing and early "
+#~ "leaf drop."
+#~ msgstr ""
+#~ "पत्तियों पर छोटे भूरे घाव, फलों पर"
+#~ " काले धब्बे, पीला पड़ना और जल्दी "
+#~ "पत्तियों का गिरना।"
+
+#~ msgid ""
+#~ "Remove infected parts, use copper-based"
+#~ " bactericides, avoid overhead watering."
+#~ msgstr ""
+#~ "संक्रमित हिस्सों को हटाएं, तांबा-आधारित "
+#~ "जीवाणुनाशकों का उपयोग करें, ऊपर से "
+#~ "पानी देने से बचें।"
+
+#~ msgid "Early blight causes concentric ring-like spots on older leaves."
+#~ msgstr "अर्ली ब्लाइट पुराने पत्तों पर समांतर वलय जैसे धब्बे पैदा करता है।"
+
+#~ msgid "Caused by Alternaria solani, a soil-borne fungus."
+#~ msgstr "Alternaria solani नामक मिट्टी में रहने वाले कवक के कारण होता है।"
+
+#~ msgid ""
+#~ "Brown circular spots with concentric "
+#~ "rings, yellowing leaves, stem lesions."
+#~ msgstr ""
+#~ "भूरे गोल धब्बे जिनमें समांतर वलय "
+#~ "होते हैं, पत्तियों का पीला पड़ना, "
+#~ "तनों पर घाव।"
+
+#~ msgid "Apply fungicides, crop rotation, and remove infected debris."
+#~ msgstr ""
+#~ "फफूंदनाशकों का प्रयोग करें, फसल चक्र "
+#~ "अपनाएं, और संक्रमित अवशेषों को हटाएं।"
+
+#~ msgid ""
+#~ "A serious disease that can destroy "
+#~ "tomato crops rapidly under moist "
+#~ "conditions."
+#~ msgstr ""
+#~ "एक गंभीर रोग जो नम स्थितियों में"
+#~ " टमाटर की फसलों को तेजी से नष्ट"
+#~ " कर सकता है।"
+
+#~ msgid "Caused by Phytophthora infestans, a water mold pathogen."
+#~ msgstr "Phytophthora infestans नामक जल फफूंद रोगजनक के कारण होता है।"
+
+#~ msgid "Dark brown blotches on leaves with pale green halos, fruit rot."
+#~ msgstr ""
+#~ "पत्तियों पर गहरे भूरे धब्बे जिनके "
+#~ "चारों ओर हल्के हरे घेरे होते हैं,"
+#~ " फलों का सड़ना।"
+
+#~ msgid "Use fungicides, avoid wet foliage, destroy infected plants."
+#~ msgstr ""
+#~ "फफूंदनाशकों का उपयोग करें, गीली पत्तियों"
+#~ " से बचें, संक्रमित पौधों को नष्ट "
+#~ "करें।"
+
+#~ msgid ""
+#~ "Fungal disease causing pale green then"
+#~ " yellow spots on upper leaf surface."
+#~ msgstr ""
+#~ "एक फफूंदजनित रोग जो पत्तियों की "
+#~ "ऊपरी सतह पर पहले हल्के हरे फिर "
+#~ "पीले धब्बे पैदा करता है।"
+
+#~ msgid "Caused by the fungus Passalora fulva, spreads in humid environments."
+#~ msgstr ""
+#~ "Passalora fulva नामक फफूंद के कारण "
+#~ "होता है, जो आर्द्र वातावरण में "
+#~ "फैलता है।"
+
+#~ msgid "Velvety olive-green mold on underside of leaves, leaf curling and drop."
+#~ msgstr ""
+#~ "पत्तियों के नीचे मखमली जैतून-हरे रंग "
+#~ "की फफूंद, पत्तियों का मुड़ना और "
+#~ "गिरना।"
+
+#~ msgid "Use resistant varieties, improve ventilation, apply fungicides."
+#~ msgstr ""
+#~ "प्रतिरोधी किस्मों का उपयोग करें, "
+#~ "वेंटिलेशन सुधारें, फफूंदनाशकों का प्रयोग "
+#~ "करें।"
+
+#~ msgid "Common fungal disease that starts as small water-soaked circular spots."
+#~ msgstr ""
+#~ "एक सामान्य फफूंदजनित रोग जो छोटे "
+#~ "पानी से भीगे गोल धब्बों के रूप "
+#~ "में शुरू होता है।"
+
+#~ msgid "Caused by the fungus Septoria lycopersici."
+#~ msgstr "Septoria lycopersici नामक फफूंद के कारण होता है।"
+
+#~ msgid "Tiny dark spots with gray centers, severe leaf loss if untreated."
+#~ msgstr ""
+#~ "छोटे गहरे धब्बे जिनके केंद्र भूरे "
+#~ "होते हैं, यदि इलाज न किया जाए "
+#~ "तो गंभीर पत्तियों की हानि।"
+
+#~ msgid ""
+#~ "Remove infected leaves, fungicide application,"
+#~ " and avoid overhead watering."
+#~ msgstr ""
+#~ "संक्रमित पत्तियों को हटाएं, फफूंदनाशकों "
+#~ "का प्रयोग करें, और ऊपर से पानी "
+#~ "देने से बचें।"
+
+#~ msgid ""
+#~ "Tiny spider-like pests that suck "
+#~ "plant juices and cause yellow stippling."
+#~ msgstr ""
+#~ "छोटे मकड़ी जैसे कीट जो पौधों का"
+#~ " रस चूसते हैं और पीले धब्बे "
+#~ "पैदा करते हैं।"
+
+#~ msgid "Infestation by two-spotted spider mites (Tetranychus urticae)."
+#~ msgstr "दो-धब्बे वाली मकड़ी के कण (Tetranychus urticae) के संक्रमण के कारण।"
+
+#~ msgid "Fine webbing, yellow or bronze leaf stippling, leaf curling."
+#~ msgstr "सूक्ष्म जाल, पीले या कांस्य रंग के पत्तों पर धब्बे, पत्तियों का मुड़ना।"
+
+#~ msgid "Use miticides or insecticidal soap, maintain plant hydration."
+#~ msgstr "माइटिसाइड्स या कीटनाशक साबुन का उपयोग करें, पौधों की नमी बनाए रखें।"
+
+#~ msgid ""
+#~ "Fungal disease leading to dark "
+#~ "concentric ring spots resembling targets."
+#~ msgstr ""
+#~ "एक फफूंदजनित रोग जो गहरे समांतर "
+#~ "वलय जैसे धब्बे पैदा करता है जो "
+#~ "लक्ष्यों जैसे दिखते हैं।"
+
+#~ msgid "Caused by Corynespora cassiicola fungus."
+#~ msgstr "Corynespora cassiicola नामक फफूंद के कारण होता है।"
+
+#~ msgid "Spots with tan centers and dark margins, leaf drop, stem lesions."
+#~ msgstr ""
+#~ "धब्बे जिनके केंद्र भूरे और किनारे "
+#~ "गहरे होते हैं, पत्तियों का गिरना, "
+#~ "तनों पर घाव।"
+
+#~ msgid "Remove affected leaves, improve air circulation, apply fungicide."
+#~ msgstr ""
+#~ "प्रभावित पत्तियों को हटाएं, वायु संचार"
+#~ " सुधारें, फफूंदनाशकों का प्रयोग करें।"
+
+#~ msgid "A viral disease that severely stunts tomato plants."
+#~ msgstr "एक वायरल रोग जो टमाटर के पौधों की वृद्धि को गंभीर रूप से रोकता है।"
+
+#~ msgid "Transmitted by whiteflies."
+#~ msgstr "सफेद मक्खियों द्वारा फैलता है।"
+
+#~ msgid "Upward curling of leaves, yellowing, stunted growth."
+#~ msgstr "पत्तियों का ऊपर की ओर मुड़न"
+

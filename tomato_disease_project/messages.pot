@@ -1,0 +1,151 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-28 23:01+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/index.html:7
+msgid "Tomato Disease Detector"
+msgstr ""
+
+#: templates/index.html:21
+msgid "Choose Language:"
+msgstr ""
+
+#: templates/index.html:29
+msgid "🌱 Tomato Disease Detector"
+msgstr ""
+
+#: templates/index.html:34
+msgid "📷 Upload Leaf Image:"
+msgstr ""
+
+#: templates/index.html:37
+msgid "💧 Soil Moisture (%)"
+msgstr ""
+
+#: templates/index.html:38
+msgid "e.g. 45"
+msgstr ""
+
+#: templates/index.html:40
+msgid "🧪 Soil pH:"
+msgstr ""
+
+#: templates/index.html:41
+msgid "e.g. 6.5"
+msgstr ""
+
+#: templates/index.html:43
+msgid "🧂 Soil Salinity (dS/m):"
+msgstr ""
+
+#: templates/index.html:44
+msgid "e.g. 1.8"
+msgstr ""
+
+#: templates/index.html:46
+msgid "🔍 Predict"
+msgstr ""
+
+#: templates/result.html:5
+msgid "Prediction Result"
+msgstr ""
+
+#: templates/result.html:13
+msgid "🌿 Prediction Result"
+msgstr ""
+
+#: templates/result.html:15
+msgid "Disease:"
+msgstr ""
+
+#: templates/result.html:16
+msgid "Uploaded Image"
+msgstr ""
+
+#: templates/result.html:23
+msgid "Low Confidence"
+msgstr ""
+
+#: templates/result.html:26
+msgid "Moderate Confidence"
+msgstr ""
+
+#: templates/result.html:29
+msgid "High Confidence"
+msgstr ""
+
+#: templates/result.html:33
+msgid "🔍 Prediction Confidence"
+msgstr ""
+
+#: templates/result.html:42
+msgid "This represents how confident the model is about its prediction."
+msgstr ""
+
+#: templates/result.html:51
+msgid "More About This Disease"
+msgstr ""
+
+#: templates/result.html:55
+msgid "📊 Sensor Readings"
+msgstr ""
+
+#: templates/result.html:57
+msgid "Soil Moisture:"
+msgstr ""
+
+#: templates/result.html:58 templates/result.html:63 templates/result.html:68
+msgid "Status:"
+msgstr ""
+
+#: templates/result.html:59 templates/result.html:64 templates/result.html:69
+msgid "Recommended:"
+msgstr ""
+
+#: templates/result.html:62
+msgid "Soil pH:"
+msgstr ""
+
+#: templates/result.html:67
+msgid "Soil Salinity:"
+msgstr ""
+
+#: templates/result.html:73
+msgid "🔁 Try another image"
+msgstr ""
+
+#: templates/result.html:83
+msgid "Description:"
+msgstr ""
+
+#: templates/result.html:84
+msgid "Causes:"
+msgstr ""
+
+#: templates/result.html:85
+msgid "Symptoms:"
+msgstr ""
+
+#: templates/result.html:86
+msgid "Cure:"
+msgstr ""
+
+#: templates/result.html:88
+msgid "No additional information available for this disease."
+msgstr ""
+

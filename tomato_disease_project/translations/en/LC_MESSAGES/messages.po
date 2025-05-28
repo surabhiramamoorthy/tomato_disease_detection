@@ -1,13 +1,9 @@
-# English translations for PROJECT.
-# Copyright (C) 2025 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-12 16:19+0530\n"
+"POT-Creation-Date: 2025-05-28 23:01+0530\n"
 "PO-Revision-Date: 2025-04-12 16:19+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,4 +13,304 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
+
+#: templates/index.html:7
+msgid "Tomato Disease Detector"
+msgstr ""
+
+#: templates/index.html:21
+msgid "Choose Language:"
+msgstr ""
+
+#: templates/index.html:29
+msgid "🌱 Tomato Disease Detector"
+msgstr ""
+
+#: templates/index.html:34
+msgid "📷 Upload Leaf Image:"
+msgstr ""
+
+#: templates/index.html:37
+msgid "💧 Soil Moisture (%)"
+msgstr ""
+
+#: templates/index.html:38
+msgid "e.g. 45"
+msgstr ""
+
+#: templates/index.html:40
+msgid "🧪 Soil pH:"
+msgstr ""
+
+#: templates/index.html:41
+msgid "e.g. 6.5"
+msgstr ""
+
+#: templates/index.html:43
+msgid "🧂 Soil Salinity (dS/m):"
+msgstr ""
+
+#: templates/index.html:44
+msgid "e.g. 1.8"
+msgstr ""
+
+#: templates/index.html:46
+msgid "🔍 Predict"
+msgstr ""
+
+#: templates/result.html:5
+msgid "Prediction Result"
+msgstr ""
+
+#: templates/result.html:13
+msgid "🌿 Prediction Result"
+msgstr ""
+
+#: templates/result.html:15
+msgid "Disease:"
+msgstr ""
+
+#: templates/result.html:16
+msgid "Uploaded Image"
+msgstr ""
+
+#: templates/result.html:23
+msgid "Low Confidence"
+msgstr ""
+
+#: templates/result.html:26
+msgid "Moderate Confidence"
+msgstr ""
+
+#: templates/result.html:29
+msgid "High Confidence"
+msgstr ""
+
+#: templates/result.html:33
+msgid "🔍 Prediction Confidence"
+msgstr ""
+
+#: templates/result.html:42
+msgid "This represents how confident the model is about its prediction."
+msgstr ""
+
+#: templates/result.html:51
+msgid "More About This Disease"
+msgstr ""
+
+#: templates/result.html:55
+msgid "📊 Sensor Readings"
+msgstr ""
+
+#: templates/result.html:57
+msgid "Soil Moisture:"
+msgstr ""
+
+#: templates/result.html:58 templates/result.html:63 templates/result.html:68
+msgid "Status:"
+msgstr ""
+
+#: templates/result.html:59 templates/result.html:64 templates/result.html:69
+msgid "Recommended:"
+msgstr ""
+
+#: templates/result.html:62
+msgid "Soil pH:"
+msgstr ""
+
+#: templates/result.html:67
+msgid "Soil Salinity:"
+msgstr ""
+
+#: templates/result.html:73
+msgid "🔁 Try another image"
+msgstr ""
+
+#: templates/result.html:83
+msgid "Description:"
+msgstr ""
+
+#: templates/result.html:84
+msgid "Causes:"
+msgstr ""
+
+#: templates/result.html:85
+msgid "Symptoms:"
+msgstr ""
+
+#: templates/result.html:86
+msgid "Cure:"
+msgstr ""
+
+#: templates/result.html:88
+msgid "No additional information available for this disease."
+msgstr ""
+
+#~ msgid "💧 Soil Moisture (%%):"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Bacterial spot is a common disease "
+#~ "that causes dark, water-soaked spots "
+#~ "on leaves and fruit."
+#~ msgstr ""
+#~ "Bacterial spot is a common disease "
+#~ "that causes dark, water-soaked spots "
+#~ "on leaves and fruit."
+
+#~ msgid ""
+#~ "Caused by Xanthomonas bacteria, often "
+#~ "spread through infected seeds or water"
+#~ " splash."
+#~ msgstr ""
+#~ "Caused by Xanthomonas bacteria, often "
+#~ "spread through infected seeds or water"
+#~ " splash."
+
+#~ msgid ""
+#~ "Small brown lesions on leaves, black "
+#~ "spots on fruit, yellowing and early "
+#~ "leaf drop."
+#~ msgstr ""
+#~ "Small brown lesions on leaves, black "
+#~ "spots on fruit, yellowing and early "
+#~ "leaf drop."
+
+#~ msgid ""
+#~ "Remove infected parts, use copper-based"
+#~ " bactericides, avoid overhead watering."
+#~ msgstr ""
+#~ "Remove infected parts, use copper-based"
+#~ " bactericides, avoid overhead watering."
+
+#~ msgid "Early blight causes concentric ring-like spots on older leaves."
+#~ msgstr "Early blight causes concentric ring-like spots on older leaves."
+
+#~ msgid "Caused by Alternaria solani, a soil-borne fungus."
+#~ msgstr "Caused by Alternaria solani, a soil-borne fungus."
+
+#~ msgid ""
+#~ "Brown circular spots with concentric "
+#~ "rings, yellowing leaves, stem lesions."
+#~ msgstr ""
+#~ "Brown circular spots with concentric "
+#~ "rings, yellowing leaves, stem lesions."
+
+#~ msgid "Apply fungicides, crop rotation, and remove infected debris."
+#~ msgstr "Apply fungicides, crop rotation, and remove infected debris."
+
+#~ msgid ""
+#~ "A serious disease that can destroy "
+#~ "tomato crops rapidly under moist "
+#~ "conditions."
+#~ msgstr ""
+#~ "A serious disease that can destroy "
+#~ "tomato crops rapidly under moist "
+#~ "conditions."
+
+#~ msgid "Caused by Phytophthora infestans, a water mold pathogen."
+#~ msgstr "Caused by Phytophthora infestans, a water mold pathogen."
+
+#~ msgid "Dark brown blotches on leaves with pale green halos, fruit rot."
+#~ msgstr "Dark brown blotches on leaves with pale green halos, fruit rot."
+
+#~ msgid "Use fungicides, avoid wet foliage, destroy infected plants."
+#~ msgstr "Use fungicides, avoid wet foliage, destroy infected plants."
+
+#~ msgid ""
+#~ "Fungal disease causing pale green then"
+#~ " yellow spots on upper leaf surface."
+#~ msgstr ""
+#~ "Fungal disease causing pale green then"
+#~ " yellow spots on upper leaf surface."
+
+#~ msgid "Caused by the fungus Passalora fulva, spreads in humid environments."
+#~ msgstr "Caused by the fungus Passalora fulva, spreads in humid environments."
+
+#~ msgid "Velvety olive-green mold on underside of leaves, leaf curling and drop."
+#~ msgstr "Velvety olive-green mold on underside of leaves, leaf curling and drop."
+
+#~ msgid "Use resistant varieties, improve ventilation, apply fungicides."
+#~ msgstr "Use resistant varieties, improve ventilation, apply fungicides."
+
+#~ msgid "Common fungal disease that starts as small water-soaked circular spots."
+#~ msgstr "Common fungal disease that starts as small water-soaked circular spots."
+
+#~ msgid "Caused by the fungus Septoria lycopersici."
+#~ msgstr "Caused by the fungus Septoria lycopersici."
+
+#~ msgid "Tiny dark spots with gray centers, severe leaf loss if untreated."
+#~ msgstr "Tiny dark spots with gray centers, severe leaf loss if untreated."
+
+#~ msgid ""
+#~ "Remove infected leaves, fungicide application,"
+#~ " and avoid overhead watering."
+#~ msgstr ""
+#~ "Remove infected leaves, fungicide application,"
+#~ " and avoid overhead watering."
+
+#~ msgid ""
+#~ "Tiny spider-like pests that suck "
+#~ "plant juices and cause yellow stippling."
+#~ msgstr ""
+#~ "Tiny spider-like pests that suck "
+#~ "plant juices and cause yellow stippling."
+
+#~ msgid "Infestation by two-spotted spider mites (Tetranychus urticae)."
+#~ msgstr "Infestation by two-spotted spider mites (Tetranychus urticae)."
+
+#~ msgid "Fine webbing, yellow or bronze leaf stippling, leaf curling."
+#~ msgstr "Fine webbing, yellow or bronze leaf stippling, leaf curling."
+
+#~ msgid "Use miticides or insecticidal soap, maintain plant hydration."
+#~ msgstr "Use miticides or insecticidal soap, maintain plant hydration."
+
+#~ msgid ""
+#~ "Fungal disease leading to dark "
+#~ "concentric ring spots resembling targets."
+#~ msgstr ""
+#~ "Fungal disease leading to dark "
+#~ "concentric ring spots resembling targets."
+
+#~ msgid "Caused by Corynespora cassiicola fungus."
+#~ msgstr "Caused by Corynespora cassiicola fungus."
+
+#~ msgid "Spots with tan centers and dark margins, leaf drop, stem lesions."
+#~ msgstr "Spots with tan centers and dark margins, leaf drop, stem lesions."
+
+#~ msgid "Remove affected leaves, improve air circulation, apply fungicide."
+#~ msgstr "Remove affected leaves, improve air circulation, apply fungicide."
+
+#~ msgid "A viral disease that severely stunts tomato plants."
+#~ msgstr "A viral disease that severely stunts tomato plants."
+
+#~ msgid "Transmitted by whiteflies."
+#~ msgstr "Transmitted by whiteflies."
+
+#~ msgid "Upward curling of leaves, yellowing, stunted growth."
+#~ msgstr "Upward curling of leaves, yellowing, stunted growth."
+
+#~ msgid "Remove infected plants, control whiteflies, use resistant varieties."
+#~ msgstr "Remove infected plants, control whiteflies, use resistant varieties."
+
+#~ msgid "Virus that causes mosaic-like mottling on leaves and fruit distortion."
+#~ msgstr "Virus that causes mosaic-like mottling on leaves and fruit distortion."
+
+#~ msgid "Caused by Tomato mosaic virus (ToMV)."
+#~ msgstr "Caused by Tomato mosaic virus (ToMV)."
+
+#~ msgid "Mottled leaves, reduced fruit size, distorted fruit shape."
+#~ msgstr "Mottled leaves, reduced fruit size, distorted fruit shape."
+
+#~ msgid "Remove infected plants, sanitize tools, avoid tobacco exposure."
+#~ msgstr "Remove infected plants, sanitize tools, avoid tobacco exposure."
+
+#~ msgid "No disease detected! The leaf looks healthy."
+#~ msgstr "No disease detected! The leaf looks healthy."
+
+#~ msgid "N/A"
+#~ msgstr "N/A"
+
+#~ msgid "Continue proper care and monitoring."
+#~ msgstr "Continue proper care and monitoring."
 

@@ -1,29 +1,354 @@
+/* styles.css */
 body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
+  background-color: #f8f9fa; /* Light grey background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+  color: #333; /* Dark grey text */
+  line-height: 1.6;
+  margin: 0; /* Reset default body margin */
+  padding: 0; /* Reset default body padding */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes at least the full viewport height */
+}
+
+.container {
+  background-color: #fff; /* White container */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  max-width: 800px;
+  margin: 40px auto; /* Center the container with some top/bottom margin */
+}
+
+h1, h2, h3 {
+  color: #28a745; /* Primary green color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="file"],
+input[type="number"],
+select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: calc(100% - 22px); /* Adjust width for padding and border */
+  box-sizing: border-box; /* Ensure padding and border are inside the element's width */
+  font-size: 16px;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #28a745; /* Primary green */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #1e7e34; /* Darker shade on hover */
+}
+
+/* Language Switcher */
+.language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.language-selector label {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: normal;
+}
+
+.language-selector select {
+  width: auto;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+/* Result Page Specific Styles (some are already in your result.html <style> tag) */
+/* Let's consolidate and refine them here */
+body#result-page { /* Apply these styles only to the result page body */
+  background-color: #e9ecef; /* Light grey background for result page */
+}
+
+.container#result-container { /* Apply these styles only to the result page container */
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: left; /* Align text to the left within the result container for better readability */
+  position: relative; /* For absolute positioning of language selector */
+}
+
+#result-container h1 {
+  text-align: left;
+  margin-bottom: 25px;
+  color: #28a745;
+}
+
+#result-container p {
+  margin-bottom: 15px;
+  color: #495057;
+  font-size: 16px;
+}
+
+#result-container strong {
+  font-weight: bold;
+  color: #343a40;
+}
+
+#result-container img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.confidence-section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.confidence-section h3 {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #007bff; /* A nice blue for emphasis */
+}
+
+.confidence-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 28px;
+  margin-bottom: 10px;
+}
+
+.confidence-fill {
+  height: 100%;
+  text-align: center;
+  line-height: 28px;
+  font-weight: bold;
+  color: white;
+  width: 0;
+  transition: width 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.low-confidence { background-color: #dc3545; } /* Red */
+.medium-confidence { background-color: #ffc107; color: #333; } /* Yellow, dark text for contrast */
+.high-confidence { background-color: #28a745; } /* Green */
+
+.confidence-label {
+  font-size: 14px;
+  color: #6c757d;
+  text-align: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -125px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.info-button {
+  background-color: #007bff; /* Blue info button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  border: 1px solid #e0e0e0;
+  margin: 30px 0;
+}
+
+/* Sensor Readings */
+#result-container h3 {
+  text-align: left;
+  margin-top: 30px;
+  color: #28a745;
+}
+
+.sensor-data {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+
+.sensor-data p {
+  margin-bottom: 10px;
+}
+
+.sensor-data strong {
+  color: #007bff;
+}
+
+.blue-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.blue-button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff; /* White modal background */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  position: relative; /* For close button positioning */
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #007bff;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40; /* Dark background for footer */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto; /* Push footer to the bottom */
+  font-size: 14px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #28a745;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container, #result-container, .modal-content {
+      margin: 20px;
+      padding: 20px;
   }
-  
-  .container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    display: inline-block;
+
+  .language-selector {
+      top: 10px;
+      right: 10px;
   }
-  
-  input[type="file"] {
-    padding: 10px;
-    margin: 20px 0;
+
+  h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
   }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+
+  button, .blue-button, .info-button {
+      font-size: 16px;
+      padding: 10px 20px;
   }
+}
