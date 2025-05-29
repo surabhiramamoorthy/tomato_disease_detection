@@ -36,10 +36,7 @@ babel.locale_selector_func = get_locale
 babel.init_app(app, locale_selector=get_locale)
 
 # Load model
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "model_new_dataset.h5")
 
-model = load_model(MODEL_PATH)
 
 # Class dictionary for disease names
 disease_dict = {
@@ -152,8 +149,23 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    lang = request.args.get('lang', 'en')  # Get language from URL query, default to 'en'
+    import os
+    from tensorflow.keras.models import load_model
+    from tensorflow.keras.preprocessing import image
+    import numpy as np
+
+    # Load the model only when this function is called
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    MODEL_PATH = os.path.join(BASE_DIR, "model_new_dataset.h5")
     
+    try:
+        model = load_model(MODEL_PATH)
+    except Exception as e:
+        print("MODEL LOAD ERROR:", e)
+        return "Model failed to load", 500
+
+    lang = request.args.get('lang', 'en')
+
     if 'file' not in request.files:
         return "No file uploaded."
 
@@ -170,11 +182,13 @@ def predict():
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0) / 255.0
 
+    # Predict
     pred = model.predict(x)[0]
     result = np.argmax(pred)
     confidence = float(pred[result]) * 100
     disease = disease_dict.get(result, "Unknown")
 
+    # Get sensor inputs
     moisture = request.form.get('moisture')
     ph = request.form.get('ph')
     salinity = request.form.get('salinity')
@@ -193,6 +207,7 @@ def predict():
     ph_status = evaluate_sensor(ph, 5.5, 7.5)
     salinity_status = evaluate_sensor(salinity, 1.0, 2.5)
 
+    
     return render_template('result.html',
                            lang=lang,   # <-- pass lang here!
                            disease=disease,
