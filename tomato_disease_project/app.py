@@ -8,6 +8,9 @@ import os
 from flask_babel import _  
 from flask_babel import gettext as _
 
+
+
+
 app = Flask(__name__)
 
 # Initialize Babel for i18n
@@ -33,7 +36,10 @@ babel.locale_selector_func = get_locale
 babel.init_app(app, locale_selector=get_locale)
 
 # Load model
-model = load_model("model_new_dataset.h5")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "model_new_dataset.h5")
+
+model = load_model(MODEL_PATH)
 
 # Class dictionary for disease names
 disease_dict = {
